@@ -165,9 +165,9 @@ export default function ContentForm() {
             >
                 <Input placeholder="激活码"
                        addonAfter={(
-                           <a href={officeConfig.getCodeLink}
-                              target="_blank" rel="noreferrer"
-                           >获取激活码</a>
+                           //<a href={officeConfig.getCodeLink}
+                              //target="_blank" rel="noreferrer"
+                           //>获取激活码</a>
                        )}
                 />
             </Form.Item>
