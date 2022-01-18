@@ -158,19 +158,19 @@ export default function ContentForm() {
                 </Input.Group>
             </Form.Item>
 
-            <Form.Item
-                label="激活码"
-                name="code"
-                rules={[{required: true, message: '必填'}]}
-            >
-                <Input placeholder="激活码"
-                       addonAfter={(
-                           <a href={officeConfig.getCodeLink}
-                              target="_blank" rel="noreferrer"
-                           >获取激活码</a>
-                       )}
-                />
-            </Form.Item>
+            //<Form.Item
+                //label="激活码"
+                //name="code"
+                //rules={[{required: true, message: '必填'}]}
+            //>
+                //<Input placeholder="激活码"
+                       //addonAfter={(
+                           //<a href={officeConfig.getCodeLink}
+                              //target="_blank" rel="noreferrer"
+                           //>获取激活码</a>
+                       //)}
+                ///>
+            //</Form.Item>
 
             <Form.Item style={{float: 'right'}}>
                 <Button type="primary" htmlType="submit">
