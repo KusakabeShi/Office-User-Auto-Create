@@ -67,24 +67,24 @@ export default function ContentForm() {
 
     const CreatedForm = (
         <Form labelCol={{span: 4}} wrapperCol={{span: 20}}>
-            <Form.Item label="邮箱">
+            <Form.Item label="Email">
                 <Input
                     value={createdAccount.email}
                     prefix={<MailOutlined/>}
                     suffix={<CopyOutlined onClick={() => {
                         copy(createdAccount.email)
-                        message.success('已复制邮箱')
+                        message.success('Copy Email')
                     }}/>}
                 />
             </Form.Item>
 
-            <Form.Item label="密码">
+            <Form.Item label="Password">
                 <Input
                     value={createdAccount.password}
                     prefix={<KeyOutlined/>}
                     suffix={<CopyOutlined onClick={() => {
                         copy(createdAccount.password)
-                        message.success('已复制密码')
+                        message.success('Copy Password')
                     }}/>}
                 />
             </Form.Item>
@@ -98,7 +98,7 @@ export default function ContentForm() {
                     type="primary"
                     htmlType="submit"
                 >
-                    登录
+                    Log in
                 </Button>
             </Form.Item>
         </Form>
@@ -112,11 +112,11 @@ export default function ContentForm() {
             wrapperCol={{span: 20}}
         >
             <Form.Item
-                label="订阅"
+                label="Subscription"
                 name="subscription"
-                rules={[{required: true, message: '必选'}]}
+                rules={[{required: true, message: '必選'}]}
             >
-                <Select placeholder="选则订阅">
+                <Select placeholder="Choose subscription">
                     {officeConfig.subscriptions.map(subscription => (
                         <Select.Option
                             value={subscription.sku}
@@ -129,7 +129,7 @@ export default function ContentForm() {
             </Form.Item>
 
             <Form.Item
-                label="邮箱"
+                label="email"
                 name="email"
                 rules={[{required: true, message: '必填'}]}
             >
@@ -139,15 +139,15 @@ export default function ContentForm() {
                         noStyle
                         rules={[{required: true, message: '必填'}]}
                     >
-                        <Input style={{width: '55%'}} placeholder="用户名"/>
+                        <Input style={{width: '55%'}} placeholder="username"/>
                     </Form.Item>
 
                     <Form.Item
                         name={['email', 'domain']}
                         noStyle
-                        rules={[{required: true, message: '必选'}]}
+                        rules={[{required: true, message: '必填'}]}
                     >
-                        <Select style={{width: '45%'}} placeholder="选择后缀">
+                        <Select style={{width: '45%'}} placeholder="Choose domain">
                             {officeConfig.domains.map(domain => (
                                 <Select.Option value={domain} key={domain}>
                                     @{domain}
@@ -159,22 +159,22 @@ export default function ContentForm() {
             </Form.Item>
 
             <Form.Item
-                label="激活码"
+                label="Code"
                 name="code"
                 rules={[{required: true, message: '必填'}]}
             >
-                <Input placeholder="激活码"
+                <Input placeholder="Code"
                        addonAfter={(
                            <a href={officeConfig.getCodeLink}
                               target="_blank" rel="noreferrer"
-                           >获取激活码</a>
+                           >Get Code</a>
                        )}
                 />
             </Form.Item>
 
             <Form.Item style={{float: 'right'}}>
                 <Button type="primary" htmlType="submit">
-                    提交
+                    Submit
                 </Button>
             </Form.Item>
         </Form>

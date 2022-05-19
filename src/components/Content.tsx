@@ -35,8 +35,9 @@ export default function Content() {
                 <div className="text-center">
                     <Notice/>
 
-                    <span style={lineOne}>欢迎使用 Office</span><br/>
-                    <span style={lineTwo}>你可在这里创作、沟通、协作并完成重要工作。</span>
+                    <span style={lineOne}>Welcome Office</span><br/>
+                    <span style={lineTwo}>You can create, communicate, collaborate and complete important tasks here.</span>
+                    <span style={lineTwo}>Microsoft has the right to ultimate interpretation!</span>
                     <br/>
                     <br/>
 
@@ -45,10 +46,10 @@ export default function Content() {
                                 type="primary" danger size="large"
                                 onClick={() => setModalVisible(v => !v)}
                         >
-                            获取 Office
+                            Get Office
                         </Button>
                         <Modal
-                            title="获取 Office"
+                            title="Get Office"
                             centered
                             visible={modalVisible}
                             width={1000}
@@ -67,7 +68,7 @@ export default function Content() {
                                         'https://office.com/login'
                                     )}
                         >
-                            登录
+                            Log in
                         </Button>
                     </Space>
                 </div>
